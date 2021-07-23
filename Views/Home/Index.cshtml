@@ -11,7 +11,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script>
         var html = [];
-            $.getJSON('agencydb.json', function (data) {
+            $.getJSON('https://ymymym.blob.core.windows.net/ymcont/agencydb.json', function (data) {
                 $.each(data, function (i,item) { // 업로드한 json 파일에서 총 8개의 자료를 불러온다.
                     html.push(Number(item.latitude)); // 위도: html[0]
                     html.push(Number(item.longitude)); // 경도: html[1]
@@ -27,7 +27,7 @@
     </head>
     <body>
         <div id="map" style="width:100%;height:100vh;"></div>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5c62ac48e750ab2a75bf3d70c5ff020f"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5c62ac48e750ab2a75bf3d70c5ff020f&libraries=clusterer"></script>
         <script>
             var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
                 mapOption = { 
